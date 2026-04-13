@@ -38,16 +38,7 @@ export default function Home() {
     <div class="overlay"></div>
     <button className="burger-button"> </button>
     </header>
-{/* -------- */}
 
-    {/* <div className="categories">
-     <button className="category filter false">All</button>
-     <button className="category filter selected">UI</button>
-     <button className="category filter false">UX</button>
-     <button className="category filter false">Enhancement</button>
-     <button className="category filter false">Bug</button>
-     <button className="category filter false">Feature</button>
-     </div> */}
      </section>
 
   {/* Heading to the right side of page  */}
@@ -82,16 +73,11 @@ export default function Home() {
     </div>
  {/* ------------ */}
 
-       {/* ---------- */}
-       
+         
        <main className="Suggestions">
-
-       
-
       
        </main>
 
-      
        </div>
       </div>
     
