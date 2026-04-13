@@ -4,6 +4,7 @@
 import express from "express";
 import pg from "pg";
 import config from "./config.js";
+import cors from "cors";  
 
 const db = new pg.Pool({
   connectionString: config.databaseUrl + "&uselibpqcompat=true",
@@ -11,9 +12,11 @@ const db = new pg.Pool({
 });
 
 const app = express();
+app.use(cors());  
 app.use(express.json());
 
 const port = 3000;
+console.log("ABOUT TO START SERVER...");
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
