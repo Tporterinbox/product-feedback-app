@@ -1,15 +1,11 @@
+
+
 // pages/Home.jsx
-// view all of the suggestions on this page
 import { useState, useEffect } from "react";
 
 export default function Home() {
   const [feedback, setFeedback] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  // // // for button, creates border when clicked
-  // const [activeCategory, setActiveCategory] = useState(null);
-
-
 
   useEffect(() => {
     fetch("http://localhost:3000/api/get-all-suggestions")
@@ -17,9 +13,9 @@ export default function Home() {
       .then((data) => setFeedback(data))
       .catch((err) => console.log(err));
   }, []);
-  
-    //  Filter from API data
-    const filteredFeedback =
+
+  // Filter feedback
+  const filteredFeedback =
     selectedCategory === "All"
       ? feedback
       : feedback.filter(
@@ -27,111 +23,118 @@ export default function Home() {
             item.category.toLowerCase() === selectedCategory.toLowerCase()
         );
 
-    return (
-
+  return (
     <div id="root">
-      <div className = "Home-page-wrapper">
+      <div className="Home-page-wrapper">
 
-      <section className="header-container">
+        {/* ----Header----*/}
+        <section className="header-container">
+          <header>
+            <div>
+              <h1>My Company</h1>
+              <p>Feedback board</p>
+            </div>
 
-<header>
-  <div>
-    <h1>My Company</h1>
-    <p>Feedback board</p>
-    </div>
+            <div className="overlay"></div>
+            <button className="burger-button"></button>
+          </header>
+        </section>
 
-    <div className="overlay"></div>
-    <button className="burger-button"> </button>
-    </header>
+        {/* ----Top Bar---- */}
+        <div className="suggestions-heading">
+          <p>{filteredFeedback.length} suggestions</p>
 
-     </section>
+          <a href="/add-feedback">
+            <button className="add-feedback">+ Add Feedback</button>
+          </a>
+        </div>
 
-  {/* Heading to the right side of page  */}
-  <div className = "suggestions-heading">
+        {/* ----CAategory Filter---*/}
+        <search className="categories">
+          <button
+            className={selectedCategory === "All" ? "active" : ""}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </button>
 
-    {/* Suggestion Counter */}
-    <p>{filteredFeedback.length} suggestions</p>
+          <button
+            className={selectedCategory === "UI" ? "active" : ""}
+            onClick={() => setSelectedCategory("UI")}
+          >
+            UI
+          </button>
 
-        {/* <h2> suggestions</h2> */}
-        <a href="/add-feedback" data-discover="true"> 
-        <button className= "add-feedback"> + Add Feedback </button>
-        </a>
-       </div>
+          <button
+            className={selectedCategory === "UX" ? "active" : ""}
+            onClick={() => setSelectedCategory("UX")}
+          >
+            UX
+          </button>
 
-   
-<search className="categories">
-        {/* rendering the data -
-       {/* CATEGORY BUTTONS  */}
+          <button
+            className={selectedCategory === "Enhancement" ? "active" : ""}
+            onClick={() => setSelectedCategory("Enhancement")}
+          >
+            Enhancement
+          </button>
 
-<button
-  className={selectedCategory === "All" ? "active" : ""}
-  onClick={() => setSelectedCategory("All")}
->
-  All
-</button>
+          <button
+            className={selectedCategory === "Bug" ? "active" : ""}
+            onClick={() => setSelectedCategory("Bug")}
+          >
+            Bug
+          </button>
 
-<button
-  className={selectedCategory === "UI" ? "active" : ""}
-  onClick={() => setSelectedCategory("UI")}
->
-  UI
-</button>
+          <button
+            className={selectedCategory === "Feature" ? "active" : ""}
+            onClick={() => setSelectedCategory("Feature")}
+          >
+            Feature
+          </button>
+        </search>
 
-<button
-  className={selectedCategory === "UX" ? "active" : ""}
-  onClick={() => setSelectedCategory("UX")}
->
-  UX
-</button>
+        {/* Suggestions / Empty State - for no feedback yet */}
+        <div className="Suggestion">
+          {filteredFeedback.length === 0 ? (
+            <div className="no-feedback">
+              <div>
+                <h3 className="title">There is no feedback yet</h3>
+                <p>Got a suggestion? Found a bug that needs to be squashed? we love hearing about new ideas to improve our app.</p>
+                <p>
+                  {selectedCategory === "All"
+                    ? "There is no feedback yet."
+                    : `No ${selectedCategory} feedback yet.`}
+                </p>
 
-<button
-  className={selectedCategory === "Enhancement" ? "active" : ""}
-  onClick={() => setSelectedCategory("Enhancement")}
->
-  Enhancement
-</button>
+                <a href="/add-feedback">
+                  <button className="add-feedback">
+                    + Add Feedback
+                  </button>
+                </a>
+              </div>
+            </div>
+          ) : (
+            filteredFeedback.map((item) => (
+              <div
+                className="suggestion-card"
+                key={item.id || item._id}
+              >
+                <h3 className="title">{item.feedback_title}</h3>
+                <p className="detail">{item.feedback_detail}</p>
 
-<button
-  className={selectedCategory === "Bug" ? "active" : ""}
-  onClick={() => setSelectedCategory("Bug")}
->
-  Bug
-</button>
+                <button className="category" disabled>
+                  {item.category}
+                </button>
+              </div>
+            ))
+          )}
+        </div>
 
-<button
-  className={selectedCategory === "Feature" ? "active" : ""}
-  onClick={() => setSelectedCategory("Feature")}
->
-  Feature
-</button>
-       </search>
-
-     <div className="Suggestion">
-  {filteredFeedback.map((item) => (
-    <div className="suggestion-card" key={item.id || item._id}>
-      <h3 className="title">{item.feedback_title}</h3>
-      <p className="detail">{item.feedback_detail}</p>
-      <button className="category" disabled>
-  {item.category}
-</button>
-      
-    </div>
-  ))}
-</div>
- {/* ------------ */}
-
-         
-       {/* <main className="Suggestions">
-      
-       </main> */}
-
-       </div>
       </div>
-    
-    );
-  }
-
-
+    </div>
+  );
+}
 
 
 
