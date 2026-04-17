@@ -208,10 +208,20 @@ header,search,.Suggestion,.suggestions-heading,.no-feedback {
   padding: 1.2rem;
   height: fit-content
 }
-
-search,.no-feedback,.Suggestion {
+/* -------- */
+/* search,.no-feedback,.Suggestion {
   background-color: var(--white)
+} */
+
+search,.no-feedback {
+  background-color: var(--white);
 }
+
+.Suggestion {
+  background-color: var(--light-grey-1);
+}
+
+/* ------------ */
 
 .suggestions-heading {
   color: var(--white);
@@ -268,7 +278,7 @@ header {
   min-width: 240px
 }
 
-.Suggestion button.category {
+.Suggestion button.category 
   cursor: default
 }
 
@@ -647,4 +657,28 @@ button {
   #root {
       padding:0
   }
+}
+/* --------------- */
+
+.suggestion-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card categories - blue on hoverhover  and active  */
+.categories button:hover {
+  background-color: var(--cobalt-blue);
+  color: var(--white);
+}
+
+.categories button.active {
+  background-color: var(--cobalt-blue);
+  color: var(--white);
 }
