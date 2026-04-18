@@ -3,12 +3,11 @@
 // ---------------------------------
 import express from "express";
 import pg from "pg";
-import config from "./config.js";
 import cors from "cors";  
 
 const db = new pg.Pool({
-  connectionString: config.databaseUrl + "&uselibpqcompat=true",
-  ssl: true,
+  connectionString: process.env.DATABASE_URL,
+  ssl: true, // use SSL encryption when connecting to the database
 });
 
 const app = express();

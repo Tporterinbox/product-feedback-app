@@ -278,7 +278,8 @@ header {
   min-width: 240px
 }
 
-.Suggestion button.category 
+
+.Suggestion button.category{
   cursor: default
 }
 

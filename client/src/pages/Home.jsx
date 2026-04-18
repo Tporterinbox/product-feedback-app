@@ -2,6 +2,7 @@
 
 // pages/Home.jsx
 import { useState, useEffect } from "react";
+// import emptyIllustration from "../assets/suggestions/illustration-empty.svg";
 
 export default function Home() {
   const [feedback, setFeedback] = useState([]);
@@ -49,7 +50,7 @@ export default function Home() {
           </a>
         </div>
 
-        {/* ----CAategory Filter---*/}
+        {/* ----Category Filter---*/}
         <search className="categories">
           <button
             className={selectedCategory === "All" ? "active" : ""}
@@ -99,6 +100,11 @@ export default function Home() {
           {filteredFeedback.length === 0 ? (
             <div className="no-feedback">
               <div>
+              {/* <img
+          src={emptyIllustration}
+          alt="No feedback illustration"
+          /> */}
+
                 <h3 className="title">There is no feedback yet</h3>
                 <p>Got a suggestion? Found a bug that needs to be squashed? we love hearing about new ideas to improve our app.</p>
                 <p>
