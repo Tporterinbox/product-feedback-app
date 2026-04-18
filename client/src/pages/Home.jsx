@@ -9,7 +9,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/get-all-suggestions")
+    fetch("https://product-feedback-app-y2ly.onrender.com/get-all-suggestions")
       .then((res) => res.json())
       .then((data) => setFeedback(data))
       .catch((err) => console.log(err));
