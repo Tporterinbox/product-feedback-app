@@ -58,19 +58,18 @@ VALUES
 ('title', 'Ux', 'users should be able to add email'),
 ('description', 'Bug', 'change the color from purple to blue');
 ```
-Put your CREATE TABLE statements here!
-If you have more than one table, include them all.
+
 💭 Reflections
-What I learned: ___________
+What I learned: How to trouble shoot backend and frontend connectivity.
 
-What I'm proud of: ___________
+What I'm proud of: The completion of this project and deployment to the internet
 
-What challenged me: ___________
+What challenged me: Learning all the connectivity of the backend and front end.
 
-Future ideas for how I'd continue building this project:
+Future ideas for how I'd continue building this project: Add email fields on the form so that users can be contacted in the future with surveys on their user experiences.
 
 🙌 Credits & Shoutouts
-
+Greatful for all of the developers that taught me how to code. 
 __________________________________________________________________________________________
 
 # Product Feedback App
