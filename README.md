@@ -1,3 +1,59 @@
+📝 Project's Title — Product Feedback App
+📌 Project Description & Purpose
+This project is a feedback app that allows users to offer suggestions and report bugs
+
+🚀 Live Site
+Here's the link to view the live app: https://product-feedback-app-tee.netlify.app/
+
+🖼️ Screenshots:
+Screenshots of the Product Feedback App
+<img width="795" height="604" alt="Screenshot 2026-04-18 at 8 07 09 PM" src="https://github.com/user-attachments/assets/b5afd83a-87a7-4cbb-8076-6acdf2060dbd" />
+
+
+<img width="795" height="719" alt="Screenshot 2026-04-18 at 8 07 37 PM" src="https://github.com/user-attachments/assets/3a46c70f-e80d-41e0-b344-09f5334e2bb0" />
+
+
+✨ Features
+This is what you can do on the app:
+
+🛠️ Tech Stack
+Frontend
+
+Languages: ___________
+Framework: ___________
+Deployment: ___________
+Server/API
+
+Languages: ___________
+Framework: ___________
+Deployment: ___________
+Database
+
+Languages: ___________
+Deployment: ___________
+🔹 API Documentation
+These are the API endpoints I built:
+
+Here's the link to the full API documentation: __________
+
+🗄️ Database Schema
+Here’s the SQL I used to create my tables:
+
+Put your CREATE TABLE statements here!
+If you have more than one table, include them all.
+💭 Reflections
+What I learned: ___________
+
+What I'm proud of: ___________
+
+What challenged me: ___________
+
+Future ideas for how I'd continue building this project:
+
+🙌 Credits & Shoutouts
+
+__________________________________________________________________________________________
+
 # Product Feedback App
 
 ## 👋 Welcome!
