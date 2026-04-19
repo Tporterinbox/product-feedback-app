@@ -15,22 +15,26 @@ Screenshots of the Product Feedback App
 
 ✨ Features
 This is what you can do on the app:
+Users can view and submit suggestions about the company's new product. After completing the suggestion form users can see their suggestions and other suggestions on the home page.
 
 🛠️ Tech Stack
 Frontend
 
-Languages: ___________
-Framework: ___________
-Deployment: ___________
+Languages: HTML, CSS, JavaScript
+Framework: React
+Deployment: Netlify
+
 Server/API
 
-Languages: ___________
-Framework: ___________
-Deployment: ___________
+Languages: Node.js
+Framework: Express
+Deployment: Render
+Dev Tools: Postman for API Testing
+
 Database
 
-Languages: ___________
-Deployment: ___________
+Languages: PostgreSQL
+Deployment: Neon
 🔹 API Documentation
 These are the API endpoints I built:
 
