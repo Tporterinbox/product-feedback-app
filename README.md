@@ -38,11 +38,26 @@ Deployment: Neon
 🔹 API Documentation
 These are the API endpoints I built:
 
-Here's the link to the full API documentation: __________
+Here's the link to the full API documentation: https://github.com/Tporterinbox/product-feedback-app/blob/main/api-documentation.md
 
 🗄️ Database Schema
 Here’s the SQL I used to create my tables:
+```CREATE TABLE suggestions (
+ 
+id SERIAL PRIMARY KEY,
+feedback_title VARCHAR NOT NULL,
+category VARCHAR NOT NULL,
+feedback_detail VARCHAR NOT NULL
+);
 
+
+INSERT INTO suggestions (feedback_title, category,feedback_detail)
+
+VALUES
+('Headline title', 'Ui', 'allow users to skip suggestions'),
+('title', 'Ux', 'users should be able to add email'),
+('description', 'Bug', 'change the color from purple to blue');
+```
 Put your CREATE TABLE statements here!
 If you have more than one table, include them all.
 💭 Reflections
