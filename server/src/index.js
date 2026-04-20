@@ -30,7 +30,7 @@ const db = new Pool({
 });
 
 
-// ✅ Test DB connection on startup
+// Test DB connection on startup
 db.connect()
   .then(() => console.log("✅ Connected to PostgreSQL"))
   .catch((err) => console.error("❌ DB connection error:", err));
@@ -66,12 +66,12 @@ async function addOneSuggestion(feedback_title, category, feedback_detail) {
 // API Endpoints
 // ---------------------------------
 
-// ✅ Root route (fixes "Cannot GET /")
+//  Root route (fixes "Cannot GET /")
 app.get("/", (req, res) => {
   res.send("API is running 🚀");
 });
 
-// ✅ Get all suggestions
+//  Get all suggestions
 app.get("/api/get-all-suggestions", async (req, res) => {
   try {
     const suggestions = await getAllSuggestions();
@@ -82,7 +82,7 @@ app.get("/api/get-all-suggestions", async (req, res) => {
   }
 });
 
-// ✅ Get suggestions by category
+//  Get suggestions by category
 app.get("/api/get-suggestions-by-category/:category", async (req, res) => {
   const { category } = req.params;
 
@@ -95,7 +95,7 @@ app.get("/api/get-suggestions-by-category/:category", async (req, res) => {
   }
 });
 
-// ✅ Add one suggestion
+//  Add one suggestion
 app.post("/api/add-one-suggestion", async (req, res) => {
   const { feedback_title, category, feedback_detail } = req.body;
 
