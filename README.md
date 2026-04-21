@@ -35,16 +35,26 @@ Database
 
 - Languages: PostgreSQL
 - Deployment: Neon
+
+ ## The Tech Stack
+
+These are all the technologies  used to build your full-stack application: 
+
+| Component | Language | Framework | Deployment | Dev Tools |
+|-----------|------------|----------------|------------|-------|
+| Frontend  | HTML, CSS, JavaScript | React         | Netlify   |      |
+| Server/API | Node.js     | Express       | Render    | Postman for API testing |
+| Database  | PostgreSQL |               | Neon    |   
+
+
   
 # API Documentation
 These are the API endpoints I built:
 - /api/get-all-suggestions
 - api/get-suggestions-by-category/:category
 - /api/add-one-suggestion
-  
 
-
-Here's the link to the full API documentation: https://github.com/Tporterinbox/product-feedback-app/blob/main/api-documentation.md
+ Here's the link to the full API documentation: https://github.com/Tporterinbox/product-feedback-app/blob/main/api-documentation.md
 
 # 🗄️ Database Schema
 Here’s the SQL I used to create my tables:
@@ -78,14 +88,5 @@ Future ideas for how I'd continue building this project: Add email fields on the
 Greatful for all of the developers that taught me how to code. 
 __________________________________________________________________________________________
 
-## The Tech Stack
-
-These are all the technologies you should use to build your full-stack application: 
-
-| Component | Language | Framework | Deployment | Dev Tools |
-|-----------|------------|----------------|------------|-------|
-| Frontend  | HTML, CSS, JavaScript | React         | Netlify   |      |
-| Server/API | Node.js     | Express       | Render    | Postman for API testing |
-| Database  | PostgreSQL |               | Neon    |   |
 
 
