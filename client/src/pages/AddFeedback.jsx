@@ -17,7 +17,7 @@ export default function AddFeedback() {
 
     try {
       const res = await fetch(
-        "https://product-feedback-app-y2ly.onrender.com",
+        "https://product-feedback-app-y2ly.onrender.com/api/add-one-suggestion",
         {
           method: "POST",
           headers: {
